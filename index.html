@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="heading">Our Pricing</h1>
+    </header>
+
+    <main>
+      <section class="toggler">
+        <span> Annually</span>
+        <input type="checkbox" id="check" class="check">
+        <label for="check" class="toggle"></label>
+        <span> Monthly</span>
+      </section>
+
+      <section class="cards">
+        <div class="card">
+          <h5 class="card__heading">Basic</h5>
+          <div class="card__price-wrapper">
+            <span class="card__currency">&dollar;</span>
+            <span class="card__price"></span>
+          </div>
+          <ul class="card__items">
+            <li>500 GB Storage</li>
+            <li>2 Users Allowed</li>
+            <li>Send up to 3 GB</li>
+          </ul>
+          <a href="#" class="card__link">Learn More</a>
+        </div>
+
+        <div class="card card--professional">
+          <h5 class="card__heading ">Professional</h5>
+          <div class="card__price-wrapper  card__price-wrapper--professional">
+            <span class="card__currency">&dollar;</span>
+            <span class="card__price"></span>
+          </div>
+          <ul class="card__items card__items--professional">
+            <li>1 TB Storagee</li>
+            <li>5 Users Allowed</li>
+            <li>Send up to 10 GB</li>
+          </ul>
+          <a href="#" class="card__link card__link--professional">Learn More</a>
+        </div>
+
+        <div class="card">
+          <h5 class="card__heading">Master</h5>
+          <div class="card__price-wrapper">
+            <span class="card__currency">&dollar;</span>
+            <span class="card__price"></span>
+          </div>
+          <ul class="card__items">
+            <li>2 TB Storagee</li>
+            <li>10 Users Allowed</li>
+            <li>Send up to 20 GB</li>
+          </ul>
+          <a href="#" class="card__link">Learn More</a>
+        </div>
+
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.linkedin.com/in/sergii-mostovyi/" target="_blank">Sergii Mostovyi</a>.
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

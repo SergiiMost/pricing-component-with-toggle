@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+:root{
+  --very-light-grayish-blue:hsl(240, 78%, 98%);
+  --light-grayish-blue:hsl(234, 14%, 74%);
+  --grayish-blue:hsl(233, 13%, 49%);
+  --dark-grayish-blue:hsl(232, 13%, 33%);
+  --gradient-right: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --gradient-bottom: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+*,*::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  overflow-x: hidden;
+}
+
+.container{
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--very-light-grayish-blue);
+  background-image: url(./images/bg-bottom.svg), url(./images/bg-top.svg);
+  background-position: bottom left, top right;
+  background-repeat: no-repeat;
+}
+
+
+.header{
+  text-align: center;
+}
+
+.heading{
+  margin: 0 auto;
+  margin: 4rem 0;
+  display: inline-block;
+  color: var(--grayish-blue);
+}
+
+/***** TOGGLER  *****/
+.toggler{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-grayish-blue);
+}
+
+.check{
+  position: absolute;
+  right: 999999px;
+}
+
+.toggle{
+  width: 6rem;
+  height: 3rem;
+  border-radius: 20px;
+  background: var(--gradient-right);
+  position: relative;
+  cursor: pointer;
+  margin: 0 1.5rem;
+}
+
+.toggle::after{
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50px;
+  background-color: white;
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  transition: all .3s;
+}
+
+.toggler input[type="checkbox"]:checked + .toggle::after{
+  transform: translateX(3rem);
+}
+/***** TOGGLER  END *****/
+
+
+/***** CARDS  *****/
+.cards{
+  margin:0 auto;
+  display: flex;
+  margin-top: 12rem;
+  justify-content: center;
+}
+
+.card{
+  flex: 1;
+  padding: 3rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 16px 2px rgba(0, 0, 0, .1);
+  color: var(--grayish-blue);
+  align-self: center;
+  max-width: 32rem;
+  width: 100%;
+}
+
+.card__heading{
+  font-size: 1.8rem;
+}
+
+.card__price-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-grayish-blue);
+  margin: 2.5rem 0;
+}
+
+.card__currency{
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+.card__price{
+  font-size: 6rem;
+}
+
+.card__items{
+  list-style: none;
+}
+
+.card__items li{
+  padding: 1.4rem;
+  border-bottom: .5px solid #e4e4e4;
+}
+
+.card__items li:first-child{
+  border-top: .5px solid #e4e4e4;
+}
+
+.card__link{
+  text-decoration: none;
+  margin-top: 3.5rem;
+  display: inline-block;
+  text-transform: uppercase;
+  color: white;
+  background: var(--gradient-right);
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 5px;
+  border: 1px  solid transparent;
+  background-clip: padding-box;
+}
+
+.card__link:hover{
+  background: white;
+  color:hsl(237, 63%, 64%);
+  border: 1px solid var(--dark-grayish-blue);
+}
+
+/*professional card styles*/
+.card--professional{
+  background: var(--gradient-bottom);
+  color: white;
+  padding: 6rem 3rem;
+  box-shadow: 0 0 16px 2px rgba(163, 168, 240, .2);  
+}
+
+.card__price-wrapper--professional{
+  color: white;
+}
+
+.card__items--professional li{
+  border-bottom: .5px solid #a7acfd;
+}
+
+.card__items--professional li:first-child{
+  border-top: .5px solid #a7acfd;
+}
+
+.card__link--professional{
+  background: white;
+  color:hsl(237, 63%, 64%) ;
+}
+
+.card__link--professional:hover{
+  background: hsl(237, 63%, 64%);
+  color: white;
+  border: 1px solid white;
+}
+/*professional card styles end*/
+/***** CARDS END  *****/
+
+
+.attribution { 
+  font-size: 1.4rem; 
+  text-align: center; 
+  margin-top: 10rem;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width:800px){
+
+  .cards{
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+
+  .card--professional{
+    padding: 3rem;
+  }
+
+  .card{
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width:500px){
+  .container{
+    background-image:  url(./images/bg-top.svg);
+    background-position: top -45px right -165px;
+    background-repeat: no-repeat;
+  }
+
+  .attribution{
+    margin-top: 5rem;
+    padding: 1.5rem 0;
+    font-size: 1.4rem;
+  }
+}
